@@ -66,9 +66,9 @@ const initialState = {
   settings: {
     lowStockThreshold: DEFAULT_LOW_STOCK_THRESHOLD,
   },
-  inventory: sampleProducts,
-  clients: sampleClients,
-  orders: sampleOrders,
+  inventory: [],
+  clients: [],
+  orders: [],
 }
 
 export const useAppStore = create(

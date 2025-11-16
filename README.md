@@ -25,7 +25,7 @@ Aplicación web mobile-first para administrar inventario, clientes, órdenes y e
 
 ├─ components/        # UI reutilizable (botones, tablas, modales, layout)
 ├─ context/           # Proveedor de tema claro/oscuro
-├─ data/              # Datos demo iniciales
+├─ data/              # Datos demo opcionales (para pruebas/manual seed)
 ├─ modules/           # Módulos de dominio (auth, inventario, clientes, órdenes, etc.)
 ├─ routes/            # Configuración de enrutamiento protegido
 ├─ services/          # Servicios reutilizables (storage helper)
@@ -54,7 +54,7 @@ Vite abrirá `http://localhost:5173/` (usa `--host` si necesitas exponer en red)
 ## 🔐 Credenciales por defecto
 - **Usuario:** `Anahi`
 - **Contraseña:** `2025`
-Puedes cambiarlas en Configuración → Credenciales (se valida la contraseña actual y se persiste en localStorage).
+Puedes cambiarlas en Configuración → Credenciales (se valida la contraseña actual y se persiste en localStorage). El sistema ahora inicia totalmente vacío (sin productos, clientes ni órdenes); utiliza los formularios de la app, la importación desde Excel o los datos demo del archivo `src/data/demoData.js` si necesitas poblarla manualmente.
 
 ## 💾 Import / Export
 - Inventario soporta **Importar** `.xlsx`, **Exportar** `.xlsx` y **Descargar formato** (encabezados preparados).
@@ -101,6 +101,6 @@ npm run test -- --run
 5. `feat: estadísticas, configuración y tema`
 6. `chore: docs, tests y scripts de despliegue`
 
-> Mantén los datos demo (`loadDemoData`) para pruebas rápidas o re-seed en distintos entornos.
+> Si necesitas poblar datos rápidamente puedes importar el JSON/XLSX o reutilizar las constantes de `src/data/demoData.js` (usadas por la acción interna `loadDemoData`).
 
 ¡Listo! Ya puedes administrar BIO - CAT sin backend y desplegar en GitHub Pages en minutos.
