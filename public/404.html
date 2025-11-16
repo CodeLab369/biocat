@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirigiendo…</title>
+    <script>
+      (function () {
+        var BASE_PATH = '/biocat'
+        var STORAGE_KEY = 'biocat-redirect-path'
+        var path = window.location.pathname.replace(BASE_PATH, '') || '/'
+        var hasLeadingSlash = path.startsWith('/')
+        var normalizedPath = hasLeadingSlash ? path : '/' + path
+        var redirectPath = normalizedPath + (window.location.search || '') + (window.location.hash || '')
+        try {
+          window.sessionStorage.setItem(STORAGE_KEY, redirectPath)
+        } catch (error) {
+          console.warn('No se pudo guardar la ruta para restaurar:', error)
+        }
+        window.location.replace(BASE_PATH + '/')
+      })()
+    </script>
+  </head>
+  <body>
+    <p>Redirigiendo…</p>
+  </body>
+</html>
