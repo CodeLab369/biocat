@@ -242,7 +242,7 @@ export const OrdersPage = () => {
           </div>
         }
       >
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <Input label="Buscar por cliente" value={search} onChange={(event) => setSearch(event.target.value)} />
         </div>
         <div className="mt-6">
@@ -387,7 +387,7 @@ export const OrdersPage = () => {
             {currentItems.map((item, index) => (
               <div
                 key={index}
-                className="grid gap-3 rounded-2xl border border-slate-100 p-3 dark:border-slate-800 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_auto]"
+                className="grid gap-3 rounded-2xl border border-slate-100 p-3 dark:border-slate-800 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_auto]"
               >
                 <Select
                   label="Producto"
@@ -434,7 +434,7 @@ export const OrdersPage = () => {
             <Button type="button" variant="secondary" size="sm" icon={Plus} onClick={addLine}>
               Agregar producto
             </Button>
-            <div className="grid gap-3 md:grid-cols-2">
+            <div className="grid gap-3 lg:grid-cols-2">
               <Input
                 label="Descuento"
                 value={form.discount}

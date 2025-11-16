@@ -190,7 +190,7 @@ export const InventoryPage = () => {
           </div>
         }
       >
-        <div className="grid gap-4 md:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <Input label="Buscar" placeholder="Nombre del producto" value={query} onChange={(event) => setQuery(event.target.value)} />
           <Select label="Ubicación" value={locationFilter} onChange={(event) => setLocationFilter(event.target.value)}>
             <option value="">Todas</option>
@@ -311,7 +311,7 @@ export const InventoryPage = () => {
           </>
         }
       >
-        <form id="product-form" className="grid gap-4 md:grid-cols-2" onSubmit={handleSubmit}>
+        <form id="product-form" className="grid gap-4 lg:grid-cols-2" onSubmit={handleSubmit}>
           <Input label="Nombre" value={form.name} onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))} required />
           <Input
             label="Ubicación"
@@ -352,7 +352,7 @@ export const InventoryPage = () => {
         footer={<Button onClick={closeModal}>Cerrar</Button>}
       >
         {selectedProduct ? (
-          <dl className="grid gap-4 md:grid-cols-2">
+          <dl className="grid gap-4 sm:grid-cols-2">
             <div>
               <dt className="text-sm text-slate-500">Cantidad</dt>
               <dd className="text-lg font-semibold">{formatInteger(selectedProduct.quantity)}</dd>

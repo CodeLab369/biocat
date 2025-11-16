@@ -105,9 +105,9 @@ export const ClientsPage = () => {
           </div>
         }
       >
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           <Input label="Buscar" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Nombre" />
-          <label className="flex flex-col gap-1 text-sm font-semibold text-slate-700 dark:text-slate-200 md:col-span-2">
+          <label className="flex flex-col gap-1 text-sm font-semibold text-slate-700 dark:text-slate-200 sm:col-span-2 xl:col-span-2">
             Lugar de envío
             <select
               value={addressFilter}
@@ -208,7 +208,7 @@ export const ClientsPage = () => {
           </>
         }
       >
-        <form id="client-form" className="grid gap-4" onSubmit={handleSubmit}>
+        <form id="client-form" className="grid gap-4 lg:grid-cols-2" onSubmit={handleSubmit}>
           <Input label="Nombre" value={form.name} onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))} required />
           <Input label="Celular" value={form.phone} onChange={(event) => setForm((prev) => ({ ...prev, phone: event.target.value }))} required />
           <Input

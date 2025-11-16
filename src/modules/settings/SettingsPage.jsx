@@ -87,7 +87,7 @@ export const SettingsPage = () => {
   return (
     <div className="space-y-6">
       <Card title="Credenciales" subtitle="Actualiza el acceso seguro">
-        <form className="grid gap-4 md:grid-cols-2" onSubmit={handleCredentialsSubmit}>
+        <form className="grid gap-4 lg:grid-cols-2" onSubmit={handleCredentialsSubmit}>
           <Input
             label="Nuevo usuario"
             placeholder="Anahi"
@@ -116,14 +116,14 @@ export const SettingsPage = () => {
             value={credentialsForm.confirmPassword}
             onChange={(event) => setCredentialsForm((prev) => ({ ...prev, confirmPassword: event.target.value }))}
           />
-          <div className="md:col-span-2 flex justify-end">
+          <div className="flex justify-end lg:col-span-2">
             <Button type="submit">Guardar cambios</Button>
           </div>
         </form>
       </Card>
 
       <Card title="Tema" subtitle="Automático por sistema o modo manual">
-        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex gap-3">
             {[
               { label: 'Claro', value: 'light' },
@@ -156,7 +156,7 @@ export const SettingsPage = () => {
       </Card>
 
       <Card title="Alertas de stock" subtitle="Define cuántas unidades disparan una alerta en el dashboard">
-        <form className="flex flex-col gap-3 md:flex-row md:items-end" onSubmit={handleThresholdSubmit}>
+        <form className="flex flex-col gap-3 lg:flex-row lg:items-end" onSubmit={handleThresholdSubmit}>
           <div className="flex-1">
             <Input
               label="Umbral mínimo"

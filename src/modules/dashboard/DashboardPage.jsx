@@ -26,14 +26,14 @@ export const DashboardPage = () => {
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard icon={Boxes} label="Unidades en inventario" value={formatInteger(totalUnits)} helper="Suma total disponible" />
         <StatCard icon={ShoppingCart} label="Órdenes pendientes" value={pendingOrders} helper="Esperando confirmación" />
         <StatCard icon={Users} label="Clientes activos" value={clients.length} helper="Registros totales" />
         <StatCard icon={ArrowRightCircle} label="Valor inventario" value={formatCurrency(inventoryValue)} helper="Costo total" />
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
         <Card
           title="Órdenes recientes"
           subtitle="Últimas actividades"
@@ -100,7 +100,7 @@ export const DashboardPage = () => {
       </div>
 
       <Card title="Resumen financiero" subtitle="Valores estimados basados en inventario actual">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <p className="text-sm text-slate-500 dark:text-slate-400">Valor total del inventario</p>
             <p className="text-3xl font-bold text-slate-900 dark:text-white">{formatCurrency(inventoryValue)}</p>

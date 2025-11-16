@@ -44,14 +44,14 @@ export const StatsPage = () => {
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard icon={Activity} label="Órdenes registradas" value={formatInteger(orders.length)} helper="Total histórico" />
         <StatCard icon={BarChart3} label="Inventario (unidades)" value={formatInteger(totalUnits)} helper="Suma actual" />
         <StatCard icon={TrendingUp} label="Valor inventario" value={formatCurrency(inventoryValue)} helper="Basado en costo" />
         <StatCard icon={PieChartIcon} label="Ingresos potenciales" value={formatCurrency(potentialIncome)} helper="Precios de venta" />
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
         <Card title="Órdenes por estado" subtitle="Pendientes vs completadas">
           <div className="h-64">
             <ResponsiveContainer>
